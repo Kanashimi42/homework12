@@ -1,0 +1,11 @@
+<form [formGroup]="myForm" novalidate (ngSubmit)="submit()">
+    <div>
+        <label>Email</label><br>
+        <input name="email" formControlName="userEmail" />
+    </div>
+    <div>
+        <label>Password</label><br>
+        <input name="Password" formControlName="userPassword" />
+    </div>
+    <button type="submit" [disabled]="myForm.invalid">Отправить</button>
+</form>

@@ -1,0 +1,11 @@
+<form #myForm="ngForm">
+    <div>
+        <label>Email</label><br>
+        <input [(ngModel)]="user.email" name="email" type="email" required #userEmail="ngModel"/>
+    </div>
+    <div>
+        <label>Пароль</label><br>
+        <input [(ngModel)]="user.password" name="password" type="password" required #userPassword="ngModel"/>
+    </div>
+    <input type="submit" (click)="onSubmit(userEmail, userPassword)" value="Отправить" />
+</form>
